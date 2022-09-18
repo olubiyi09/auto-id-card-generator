@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --color-grey: #eee;
+  --color-dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* custom style start here */
+/* custom style start here */
+/* custom style start here */
+
+.main {
+  display: flex;
+  background-color: rgb(248, 246, 246);
+}
+
+.left-con {
+  background-color: var(--color-sec);
+  /* width: 40%; */
+  padding: 0 5rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left-con > * {
+  width: 50rem;
+  color: var(--white);
+}
+
+.left-sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.left-con h1 {
+  font-size: 5rem;
+  margin-bottom: 3rem;
+}
+
+.left-con p {
+  font-size: 1.8rem;
+}
+
+.right-con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.app-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.app-form > * {
+  margin-bottom: 1.4rem;
+  padding: 1.2rem 1rem;
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: var(--color-grey);
+  width: 110%;
+}
+
+.header {
+  background-color: transparent;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--color-sec);
+}
+
+.para {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.img {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.gen-btn {
+  border: none;
+  background-color: var(--color-sec);
+  color: var(--color-grey);
+  font-size: 2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+.gen-btn:hover {
+  background-color: orangered;
+  transition: all 0.3s;
+}
+
+/* card style start here */
+/* card style start here */
+/* card style start here */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card-wrapper {
+  background-color: #005490;
+  width: 40rem;
+  height: 50rem;
+  border-radius: 5px;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  background-color: var(--color-sec);
+  color: var(--white);
+  border-radius: 0 0 50% 50%;
+}
+
+.top h1 {
+  font-size: 2rem;
+}
+
+.id-img {
+  width: 40%;
+  height: 30%;
+  border-radius: 50%;
+  border: 5px solid var(--white);
+  padding: 0.3rem;
+}
+
+.down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.down-wrapper {
+  color: var(--white);
+  font-size: 2rem;
+  line-height: 4rem;
+}
+
+footer {
+  background-color: var(--color-sec);
+  margin-top: 1.9rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: var(--white);
+  text-align: center;
+}
+
+/* MEDIA QUERY */
+/* MEDIA QUERY */
+/* MEDIA QUERY */
+@media only screen and (max-width: 769px) {
+  .main {
+    padding-bottom: 2rem;
+  }
+
+  .left-con {
+    width: 50%;
+  }
+
+  .left-con h1 {
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  .left-con p {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .right-con {
+    width: 50%;
+  }
+
+  .header {
+    font-size: 3.5rem;
+  }
+
+  .app-form > * {
+    width: 100%;
+  }
+
+  .app-wrapper {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right-con,
+  .left-con {
+    width: 100%;
+  }
+
+  .left-con p {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .left-con > * {
+    width: 35rem;
+  }
+
+  .left-con h1 {
+    font-size: 3.5rem;
+  }
+
+  .header {
+    font-size: 3rem;
+  }
+
+  .app-form > * {
+    width: 90%;
+  }
+  .app-form {
+    width: 100%;
+    margin: 3rem auto;
+  }
+
+  .right-con {
+    margin-left: 2rem;
+  }
+}
