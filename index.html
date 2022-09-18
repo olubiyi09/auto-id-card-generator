@@ -27,19 +27,59 @@
         <div class="app-wrapper">
           <form action="" class="app-form">
             <div class="header">Generate ID Card</div>
-            <input type="text" class="name" placeholder="Name" />
+            <input type="text" class="name card-name" placeholder="Name" />
             <input
               type="number"
-              class="reg-no"
+              class="reg-no card-reg"
               placeholder="Registration Number"
             />
-            <input type="text" class="gender" placeholder="Gender" />
-            <input type="text" class="dept" placeholder="Department" />
+            <input
+              type="text"
+              class="gender card-gender"
+              placeholder="Gender"
+            />
+            <input
+              type="text"
+              class="dept card-dept"
+              placeholder="Department"
+            />
             <p class="para">Add image</p>
             <input type="file" class="img" name="img" accept="image/*" />
 
             <button type="submit" class="gen-btn">Generate Card</button>
           </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="card-sec">
+      <div class="container">
+        <div class="card-wrapper">
+          <div class="top">
+            <h1 class="id-header">ABC COLLEGE NIGERIA</h1>
+            <p>A Great Place To Learn</p>
+            <img class="id-img" src="./images/seyi (2).jpeg" alt="" />
+          </div>
+
+          <div class="down">
+            <div class="down-wrapper">
+              <div class="card-name">
+                <strong>Name:</strong><span class="display-name"></span>
+              </div>
+              <div class="card-reg">
+                <strong>Reg No:</strong><span class="display-reg"></span>
+              </div>
+              <div class="card-gender">
+                <strong>Gender:</strong><span class="display-gen"></span>
+              </div>
+              <div class="card-dept">
+                <strong>Dept:</strong><span class="display-dept"></span>
+              </div>
+            </div>
+          </div>
+          <footer class="sec-footer">
+            Campus Address: No 12 abc estate, Nigeria
+          </footer>
         </div>
       </div>
     </section>

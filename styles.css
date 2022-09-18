@@ -148,6 +148,10 @@ img {
 /* card style start here */
 /* card style start here */
 
+.card-sec {
+  display: none;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -195,6 +199,13 @@ img {
   color: var(--white);
   font-size: 2rem;
   line-height: 4rem;
+}
+
+.display-name,
+.display-reg,
+.display-gen,
+.display-dept {
+  text-transform: capitalize;
 }
 
 footer {
