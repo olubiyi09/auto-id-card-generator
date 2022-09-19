@@ -50,7 +50,6 @@ img {
 
 .left-con {
   background-color: var(--color-sec);
-  /* width: 40%; */
   padding: 0 5rem;
   height: 100vh;
   display: flex;
@@ -154,6 +153,7 @@ img {
 
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -180,12 +180,18 @@ img {
   font-size: 2rem;
 }
 
+.display-image,
 .id-img {
   width: 40%;
   height: 30%;
   border-radius: 50%;
   border: 5px solid var(--white);
   padding: 0.3rem;
+}
+
+img {
+  border-radius: 50%;
+  display: flex;
 }
 
 .down {
@@ -215,6 +221,24 @@ footer {
   font-size: 1.5rem;
   color: var(--white);
   text-align: center;
+}
+
+#btn {
+  margin-top: 4rem;
+  border: 3px solid var(--color-sec);
+  border-radius: 5px;
+  background-color: #005490;
+  color: var(--white);
+  padding: 1rem 2rem;
+  width: 55%;
+  font-size: 2rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+#btn:hover {
+  background-color: var(--color-sec);
+  border: 3px solid #005490;
 }
 
 /* MEDIA QUERY */
@@ -294,5 +318,9 @@ footer {
 
   .right-con {
     margin-left: 2rem;
+  }
+
+  #btn {
+    width: 100%;
   }
 }

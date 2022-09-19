@@ -43,8 +43,8 @@
               class="dept card-dept"
               placeholder="Department"
             />
-            <p class="para">Add image</p>
-            <input type="file" class="img" name="img" accept="image/*" />
+            <p class="para">Upload Passport Photograph</p>
+            <input type="file" class="img" id="image-input" name="img" />
 
             <button type="submit" class="gen-btn">Generate Card</button>
           </form>
@@ -58,7 +58,10 @@
           <div class="top">
             <h1 class="id-header">ABC COLLEGE NIGERIA</h1>
             <p>A Great Place To Learn</p>
-            <img class="id-img" src="./images/seyi (2).jpeg" alt="" />
+
+            <div class="display-image id-img">
+              <img src="" class="photo" alt="" />
+            </div>
           </div>
 
           <div class="down">
@@ -81,6 +84,7 @@
             Campus Address: No 12 abc estate, Nigeria
           </footer>
         </div>
+        <button id="btn">Download ID Card</button>
       </div>
     </section>
 
