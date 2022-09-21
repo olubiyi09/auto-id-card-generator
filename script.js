@@ -13,7 +13,6 @@ const file = document.querySelector("#image-input");
 const imgDiv = document.querySelector(".display-image");
 const myWidth = 535;
 const myheight = 500;
-// const img = document.querySelector(".photo");
 const cardPage = "cardpage.html";
 
 genBtn.addEventListener("click", generateCard);
@@ -21,6 +20,7 @@ genBtn.addEventListener("click", generateCard);
 function generateCard(e) {
   e.preventDefault();
 
+  // FORM VALIDATION
   // FORM VALIDATION
   if (
     cardName.value == "" ||
@@ -41,13 +41,14 @@ function generateCard(e) {
   }
 }
 
+// DISPLAY CARD IMAGE
+// DISPLAY CARD IMAGE
 file.addEventListener("change", (e) => {
   let imageFile = e.target.files[0];
 
   let reader = new FileReader();
   reader.readAsDataURL(imageFile);
 
-  // console.log(reader);
   reader.onload = (e) => {
     let imageUrl = e.target.result;
 
@@ -55,12 +56,12 @@ file.addEventListener("change", (e) => {
     image.classList.add("photo");
     image.src = imageUrl;
 
+    // RESIZE THE IMAGE
+    // RESIZE THE IMAGE
     image.onload = (e) => {
       const canvas = document.createElement("canvas");
-      // let ratio = myWidth / e.target.width;
       canvas.width = myWidth;
       canvas.height = myheight;
-      // canvas.height = e.target.height;
 
       const context = canvas.getContext("2d");
       context.drawImage(image, 0, 0, canvas.width, canvas.height);
