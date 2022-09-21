@@ -11,7 +11,9 @@ const mainContainer = document.querySelector(".main");
 const cardSec = document.querySelector(".card-sec");
 const file = document.querySelector("#image-input");
 const imgDiv = document.querySelector(".display-image");
-const img = document.querySelector(".photo");
+const myWidth = 535;
+const myheight = 500;
+// const img = document.querySelector(".photo");
 const cardPage = "cardpage.html";
 
 genBtn.addEventListener("click", generateCard);
@@ -33,23 +35,57 @@ function generateCard(e) {
     displayReg.innerHTML = " " + regNo.value;
     displayGen.innerHTML = " " + gender.value;
     displayDept.innerHTML = " " + dept.value;
-    // imgDiv.innerHTML = " " + imageInput.value;
 
     mainContainer.style.display = "none";
     cardSec.style.display = "block";
   }
 }
 
-file.addEventListener("change", function () {
-  const choosedFile = this.files[0];
+file.addEventListener("change", (e) => {
+  let imageFile = e.target.files[0];
 
-  if (choosedFile) {
-    const reader = new FileReader();
+  let reader = new FileReader();
+  reader.readAsDataURL(imageFile);
 
-    reader.addEventListener("load", function () {
-      img.setAttribute("src", reader.result);
-    });
+  // console.log(reader);
+  reader.onload = (e) => {
+    let imageUrl = e.target.result;
 
-    reader.readAsDataURL(choosedFile);
-  }
+    let image = document.createElement("img");
+    image.classList.add("photo");
+    image.src = imageUrl;
+
+    image.onload = (e) => {
+      const canvas = document.createElement("canvas");
+      // let ratio = myWidth / e.target.width;
+      canvas.width = myWidth;
+      canvas.height = myheight;
+      // canvas.height = e.target.height;
+
+      const context = canvas.getContext("2d");
+      context.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+      let newImageUrl = context.canvas.toDataURL("image/jpeg", 90);
+
+      let newImage = document.createElement("img");
+      newImage.classList.add("photo");
+      newImage.src = newImageUrl;
+
+      imgDiv.appendChild(newImage);
+    };
+  };
 });
+
+// file.addEventListener("change", function () {
+//   const choosedFile = this.files[0];
+
+//   if (choosedFile) {
+//     const reader = new FileReader();
+
+//     reader.addEventListener("load", function () {
+//       img.setAttribute("src", reader.result);
+//     });
+
+//     reader.readAsDataURL(choosedFile);
+//   }
+// });
